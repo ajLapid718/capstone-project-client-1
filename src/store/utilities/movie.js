@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const BASE_URL = process.env.BASE_URL;
+
 // Action Types
 const FETCH_MOVIE = "FETCH_MOVIE";
 
@@ -15,7 +17,7 @@ const fetchMovie = (movie) => {
 // Thunk Creators
 export const fetchMovieThunk = (id) => (dispatch) => {
   return axios
-    .get(`/api/movies/${id}`)
+    .get(`${BASE_URL}/api/movies/${id}`)
     .then((res) => res.data)
     .then((movie) => dispatch(fetchMovie(movie)))
     .catch((err) => console.log(err));
