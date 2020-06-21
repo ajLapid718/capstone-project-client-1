@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = "https://cuny-capstone-server.herokuapp.com";
 
 // ACTION TYPES
 const FETCH_FAVORITE_MOVIES = "FETCH_FAVORITE_MOVIES";
