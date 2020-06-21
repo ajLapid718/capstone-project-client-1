@@ -6,7 +6,7 @@ const BASE_URL = process.env.BASE_URL;
 const SIGN_UP = "SIGN_UP";
 const LOGIN = "LOGIN";
 const LOGOUT = "LOGOUT";
-const FETCH_USER = "FETCH_USER";
+// const FETCH_USER = "FETCH_USER";
 
 // ACTION CREATORS
 const signUp = (user) => {
@@ -29,12 +29,12 @@ const logout = () => {
   };
 };
 
-const fetchUser = (user) => {
-  return {
-    type: FETCH_USER,
-    payload: user,
-  };
-};
+// const fetchUser = (user) => {
+//   return {
+//     type: FETCH_USER,
+//     payload: user,
+//   };
+// };
 
 // THUNKS
 export const signUpThunk = (email, password) => async (dispatch) => {

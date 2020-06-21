@@ -11,9 +11,9 @@ const ProfileView = (props) => {
     }
 
     if (props.favoriteMovies.length !== 0) {
-        props.favoriteMovies.map((movie) => {
-            listOfFavoriteMovies.push(movie);
-        })
+        props.favoriteMovies.map((movie) => (
+            listOfFavoriteMovies.push(movie)
+        ))
     }
 
     const date = props.loggedInUser.createdAt.toString().substring(0, 10);
