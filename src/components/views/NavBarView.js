@@ -11,50 +11,50 @@ const NavBarView = (props) => {
     buttons = (
       <>
         <li className="nav-item">
-          <a className="nav-link" onClick={props.handleLogout}>
+          <Link className="nav-link" onClick={props.handleLogout}>
             Logout
-          </a>
+          </Link>
         </li>
-        <Link to={`/profile`}>
+        {/* <Link to={`/profile`}> */}
           <li className="nav-item">
-            <a className="nav-link" href={`/login`}>
+            <Link to={`/profile`} className="nav-link">
               Profile
-            </a>
+            </Link>
           </li>
-        </Link>
+        {/* </Link> */}
       </>
     );
   } else {
     buttons = (
       <>
         {" "}
-        <Link to={`/login`}>
+        {/* <Link to={`/login`}> */}
           <li className="nav-item">
-            <a className="nav-link" href={`/login`}>
+            <Link to={`/login`} className="nav-link">
               Login
-            </a>
+            </Link>
           </li>
-        </Link>
-        <Link to={`/signup`}>
+        {/* </Link> */}
+        {/* <Link to={`/signup`}> */}
           <li className="nav-item">
-            <a className="nav-link" href={`/signup`}>
+            <Link to={`/signup`} className="nav-link">
               Sign Up
-            </a>
+            </Link>
           </li>
-        </Link>
+        {/* </Link> */}
       </>
     );
   }
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <ul className="navbar-nav mr-auto">
-        <Link to={`/`}>
+        {/* <Link to={`/`}> */}
           <li className="nav-item active">
-            <a className="nav-link" href={`/`} onClick={props.homeClicked}>
+            <Link to={`/`} className="nav-link" onClick={props.homeClicked}>
               Home <span className="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
-        </Link>
+        {/* </Link> */}
         {buttons}
       </ul>
       <div className="form-inline my-2 my-lg-0 float-right">
